@@ -7,8 +7,11 @@
 //
 
 #import "UserProfileViewController.h"
+#import "FacebookSDK/FacebookSDK.h"
 
 @interface UserProfileViewController ()
+
+@property (nonatomic) id<FBGraphUser> graphUser;
 
 @end
 
@@ -18,7 +21,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.nameLabel.text = @"We got this!";
     }
     return self;
 }

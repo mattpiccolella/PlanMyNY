@@ -17,9 +17,12 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [FBLoginView class];
     // Override point for customization after application launch.
-    self.window.rootViewController = [[FacebookLoginViewController alloc] initWithNibName:nil bundle:nil];
+    FacebookLoginViewController *rootView = [[FacebookLoginViewController alloc] initWithNibName:nil bundle:nil];
+    UINavigationController *nvcontroller = [[UINavigationController alloc] initWithRootViewController:rootView];
+    [self.window addSubview:nvcontroller.view];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    [self.window setRootViewController:nvcontroller];
     return YES;
 }
 

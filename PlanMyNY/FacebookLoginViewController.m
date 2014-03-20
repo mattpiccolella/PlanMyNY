@@ -8,6 +8,7 @@
 
 #import "FacebookLoginViewController.h"
 #import "FacebookSDK/FacebookSDK.h"
+#import "UserProfileViewController.h"
 
 @interface FacebookLoginViewController ()
 
@@ -28,7 +29,15 @@
 
 - (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
     self.statusLabel.text = @"You're logged in as";
-    NSLog(@"Here I Am!");
+    
+    NSLog(@"HERE!");
+    
+    NSLog(@"%@", self.navigationController);
+    
+    
+    UserProfileViewController *profile = [[UserProfileViewController alloc] initWithNibName:@"UserProfileViewController" bundle:nil];
+    profile.loginView = self.loginView;
+    [self.navigationController pushViewController:profile animated:YES];
 }
 
 - (void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView {
