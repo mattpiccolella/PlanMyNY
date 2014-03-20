@@ -41,8 +41,10 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
-			<key>CFBundleURLName</key>
-			<string>fb613925892012742</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb613925892012742</string>
+			</array>
 		</dict>
 	</array>
 </dict>

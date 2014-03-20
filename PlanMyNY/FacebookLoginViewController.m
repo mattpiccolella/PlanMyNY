@@ -6,10 +6,10 @@
 //  Copyright (c) 2014 Matthew Piccolella. All rights reserved.
 //
 
-#import "FacebookViewController.h"
+#import "FacebookLoginViewController.h"
 #import "FacebookSDK/FacebookSDK.h"
 
-@interface FacebookViewController ()
+@interface FacebookLoginViewController ()
 
 @property (strong, nonatomic) IBOutlet FBProfilePictureView *profilePictureView;
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
@@ -17,7 +17,7 @@
 
 @end
 
-@implementation FacebookViewController
+@implementation FacebookLoginViewController
 
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user {
     self.profilePictureView.profileID = user.id;
@@ -28,6 +28,7 @@
 
 - (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
     self.statusLabel.text = @"You're logged in as";
+    NSLog(@"Here I Am!");
 }
 
 - (void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView {
@@ -69,13 +70,11 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        FBLoginView *login = [[FBLoginView alloc] init];
-        login.defaultAudience = FBSessionDefaultAudienceEveryone;
-        login.readPermissions = @[@"basic_info", @"user_events"];
-        login.publishPermissions = @[@"create_event"];
-        login.frame = CGRectOffset(login.frame, (self.view.center.x - (login.frame.size.width / 2)), 5);
-        login.delegate = self;
-        [self.view addSubview:login];
+        self.loginView = [[FBLoginView alloc] init];
+        self.loginView.defaultAudience = FBSessionDefaultAudienceEveryone;
+        self.loginView.readPermissions = @[@"basic_info", @"user_events"];
+        self.loginView.publishPermissions = @[@"create_event"];
+        self.loginView.delegate = self;
     }
     return self;
 }

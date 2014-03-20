@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "FacebookSDK/FacebookSDK.h"
-#import "FacebookViewController.h"
+#import "FacebookLoginViewController.h"
 
 @implementation AppDelegate
 
@@ -17,7 +17,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [FBLoginView class];
     // Override point for customization after application launch.
-    self.window.rootViewController = [[FacebookViewController alloc] initWithNibName:nil bundle:nil];
+    self.window.rootViewController = [[FacebookLoginViewController alloc] initWithNibName:nil bundle:nil];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

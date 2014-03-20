@@ -1,5 +1,5 @@
 //
-//  FacebookViewController.h
+//  FacebookLoginViewController.h
 //  PlanMyNY
 //
 //  Created by Matt on 3/20/14.
@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <FacebookSDK/FacebookSDK.h>
 
-@interface FacebookViewController : UIViewController <FBLoginViewDelegate>
+@interface FacebookLoginViewController : UIViewController <FBLoginViewDelegate>
+@property (strong, nonatomic) IBOutlet FBLoginView *loginView;
 
 @end
