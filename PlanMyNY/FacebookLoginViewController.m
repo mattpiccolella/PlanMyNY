@@ -23,21 +23,18 @@
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user {
     self.profilePictureView.profileID = user.id;
     self.nameLabel.text = user.name;
-    
-    NSLog(@"ID: %@", user.id);
+
+    UserProfileViewController *profile = [[UserProfileViewController alloc] initWithNibName:@"UserProfileViewController" bundle:nil];
+    profile.loginView = self.loginView;
+    profile.graphUser = user;
+    UINavigationController *navcontrol = [[UINavigationController alloc] initWithRootViewController:profile];
+    [[UIApplication sharedApplication] delegate].window.rootViewController = navcontrol;
 }
 
 - (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
     self.statusLabel.text = @"You're logged in as";
     
     NSLog(@"HERE!");
-    
-    NSLog(@"%@", self.navigationController);
-    
-    
-    UserProfileViewController *profile = [[UserProfileViewController alloc] initWithNibName:@"UserProfileViewController" bundle:nil];
-    profile.loginView = self.loginView;
-    [self.navigationController pushViewController:profile animated:YES];
 }
 
 - (void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView {

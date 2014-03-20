@@ -9,8 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <FacebookSDK/FacebookSDK.h>
 
-@interface UserProfileViewController : UIViewController
+@interface UserProfileViewController : UIViewController <FBLoginViewDelegate>
+
 @property (strong, nonatomic) IBOutlet FBLoginView *loginView;
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
+@property (nonatomic) id<FBGraphUser> graphUser;
+@property (strong, nonatomic) IBOutlet FBProfilePictureView *profilePicture;
+@property (strong, nonatomic) IBOutlet UILabel *userName;
 
 @end

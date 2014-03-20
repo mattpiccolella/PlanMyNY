@@ -16,13 +16,12 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [FBLoginView class];
+    [FBProfilePictureView class];
     // Override point for customization after application launch.
     FacebookLoginViewController *rootView = [[FacebookLoginViewController alloc] initWithNibName:nil bundle:nil];
-    UINavigationController *nvcontroller = [[UINavigationController alloc] initWithRootViewController:rootView];
-    [self.window addSubview:nvcontroller.view];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    [self.window setRootViewController:nvcontroller];
+    [self.window setRootViewController:rootView];
     return YES;
 }
 
