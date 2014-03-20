@@ -16,15 +16,19 @@
 
 @implementation UserProfileViewController
 
+- (IBAction)planEvent:(id)sender {
+    NSLog(@"To be implemented later...");
+}
+
+- (IBAction)currentTrips:(id)sender {
+    NSLog(@"To be implemented later...");
+}
+
 - (void)viewWillAppear:(BOOL)animated {
-    if (self.graphUser) {
-        self.profilePicture.profileID = self.graphUser.id;
-        self.userName.text = self.graphUser.name;
-    }
+
 }
 
 - (void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView {
-    NSLog(@"We shouldn't be here!");
     FacebookLoginViewController *login = [[FacebookLoginViewController alloc] initWithNibName: nil bundle:nil];
     [[UIApplication sharedApplication] delegate].window.rootViewController = login;
 }
@@ -35,13 +39,16 @@
     if (self) {
         UINavigationItem *navItem = self.navigationItem;
         navItem.title = @"User Profile";
-        self.nameLabel.text = @"We got this!";
     }
     return self;
 }
 
 - (void)viewDidLoad
 {
+    if (self.graphUser) {
+        self.profilePicture.profileID = self.graphUser.id;
+        self.userName.text = self.graphUser.name;
+    }
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
@@ -51,5 +58,4 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 @end

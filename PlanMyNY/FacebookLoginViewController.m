@@ -23,7 +23,7 @@
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user {
     self.profilePictureView.profileID = user.id;
     self.nameLabel.text = user.name;
-
+    NSLog(@"HERE!");
     UserProfileViewController *profile = [[UserProfileViewController alloc] initWithNibName:@"UserProfileViewController" bundle:nil];
     profile.loginView = self.loginView;
     profile.graphUser = user;
@@ -33,8 +33,6 @@
 
 - (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
     self.statusLabel.text = @"You're logged in as";
-    
-    NSLog(@"HERE!");
 }
 
 - (void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView {

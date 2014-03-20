@@ -16,5 +16,7 @@
 @property (nonatomic) id<FBGraphUser> graphUser;
 @property (strong, nonatomic) IBOutlet FBProfilePictureView *profilePicture;
 @property (strong, nonatomic) IBOutlet UILabel *userName;
+- (IBAction)planEvent:(id)sender;
+- (IBAction)currentTrips:(id)sender;
 
 @end
