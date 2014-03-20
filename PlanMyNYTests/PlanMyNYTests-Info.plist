@@ -18,5 +18,16 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>FacebookAppID</key>
+	<string>613925892012742</string>
+	<key>FacebookDisplayName</key>
+	<string>DevFestApp</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>fb613925892012742</string>
+		</dict>
+	</array>
 </dict>
 </plist>
