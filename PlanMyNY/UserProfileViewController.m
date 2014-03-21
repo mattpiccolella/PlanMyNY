@@ -9,6 +9,8 @@
 #import "UserProfileViewController.h"
 #import "FacebookSDK/FacebookSDK.h"
 #import "FacebookLoginViewController.h"
+#import "TripDetailViewController.h"
+
 
 @interface UserProfileViewController ()
 
@@ -22,12 +24,23 @@
     NSURL *url = [NSURL URLWithString:@"http://api.mattpic.com/v1.0/random_trip"];
     NSURLRequest *req = [NSURLRequest requestWithURL:url];
     
+    /*
+    
     NSURLSessionDataTask *task = [self.session dataTaskWithRequest:req completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        NSString *resultJSON = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        NSLog(@"%@", resultJSON);
-    }];
+        NSLog(@"This is where I am right now.");
+        NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        
+        TripDetailViewController *tripDetail = [[TripDetailViewController alloc] initWithNibName:nil bundle:nil];
+        tripDetail.location = jsonObject[@"location"];
+        tripDetail.event = jsonObject[@"event"];
+        tripDetail.restaurant = jsonObject[@"restaurant"];
+        [self.navigationController pushViewController:tripDetail animated:YES];
+        NSLog(@"%@", jsonObject);
+        }];
     
     [task resume];
+     */
+    [self.navigationController pushViewController:[[TripDetailViewController alloc]initWithNibName:nil bundle:nil] animated:YES];
 }
 
 - (IBAction)currentTrips:(id)sender {

@@ -27,24 +27,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    if (self.location) {
-        self.locationName.text = self.location[@"name"];
-    }
-    else {
-        self.locationName.text = @"ERROR";
-    }
-    if (self.event) {
-        self.eventName.text = self.event[@"name"];
-    }
-    else {
-        self.locationName.text = @"ERRROR";
-    }
-    if (self.restaurant) {
-        self.restaurantName.text = self.restaurant[@"name"];
-    }
-    else {
-        self.restaurantName.text = @"ERROR";
-    }
 }
 
 - (void)didReceiveMemoryWarning
