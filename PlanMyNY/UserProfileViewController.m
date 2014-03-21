@@ -32,14 +32,11 @@
         tripDetail.location = jsonObject[@"location"];
         tripDetail.event = jsonObject[@"event"];
         tripDetail.restaurant = jsonObject[@"restaurant"];
-        NSLog(@"We're here now!");
-        NSLog(@"%@", jsonObject);
         [self.indicator performSelectorOnMainThread:@selector(stopAnimating) withObject:nil waitUntilDone:YES];
         dispatch_sync(dispatch_get_main_queue(), ^{
             [self.navigationController pushViewController:tripDetail animated:YES];
         });
     }];
-    NSLog(@"Is this where we are?");
     [task resume];
 }
 

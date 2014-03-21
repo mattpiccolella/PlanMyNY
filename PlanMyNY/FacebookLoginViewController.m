@@ -23,7 +23,6 @@
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user {
     self.profilePictureView.profileID = user.id;
     self.nameLabel.text = user.name;
-    NSLog(@"HERE!");
     UserProfileViewController *profile = [[UserProfileViewController alloc] initWithNibName:@"UserProfileViewController" bundle:nil];
     profile.loginView = self.loginView;
     profile.graphUser = user;

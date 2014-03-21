@@ -10,6 +10,7 @@
 		5C0AF5F918DC9586009F951A /* TripDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C0AF5F718DC9586009F951A /* TripDetailViewController.m */; };
 		5C0AF5FA18DC9586009F951A /* TripDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C0AF5F818DC9586009F951A /* TripDetailViewController.xib */; };
 		5C0AF5FC18DCA7A9009F951A /* NYT_png_312x1000_q100.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C0AF5FB18DCA7A9009F951A /* NYT_png_312x1000_q100.png */; };
+		5C0AF5FF18DCB019009F951A /* TripDetailWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C0AF5FE18DCB019009F951A /* TripDetailWebViewController.m */; };
 		5C4E4DEB18DB35FB008F0042 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C4E4DEA18DB35FB008F0042 /* Foundation.framework */; };
 		5C4E4DED18DB35FB008F0042 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C4E4DEC18DB35FB008F0042 /* CoreGraphics.framework */; };
 		5C4E4DEF18DB35FB008F0042 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C4E4DEE18DB35FB008F0042 /* UIKit.framework */; };
@@ -45,6 +46,8 @@
 		5C0AF5F718DC9586009F951A /* TripDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TripDetailViewController.m; path = ../TripDetailViewController.m; sourceTree = "<group>"; };
 		5C0AF5F818DC9586009F951A /* TripDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TripDetailViewController.xib; path = ../TripDetailViewController.xib; sourceTree = "<group>"; };
 		5C0AF5FB18DCA7A9009F951A /* NYT_png_312x1000_q100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NYT_png_312x1000_q100.png; path = ../../../Downloads/NYT_png_312x1000_q100.png; sourceTree = "<group>"; };
+		5C0AF5FD18DCB019009F951A /* TripDetailWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripDetailWebViewController.h; sourceTree = "<group>"; };
+		5C0AF5FE18DCB019009F951A /* TripDetailWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripDetailWebViewController.m; sourceTree = "<group>"; };
 		5C4E4DE718DB35FB008F0042 /* PlanMyNY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanMyNY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C4E4DEA18DB35FB008F0042 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5C4E4DEC18DB35FB008F0042 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -139,6 +142,8 @@
 				5C4E4E2518DB4854008F0042 /* FacebookLoginViewController.xib */,
 				5C4E4E2E18DB5005008F0042 /* UserProfileViewController.h */,
 				5C4E4E2F18DB5005008F0042 /* UserProfileViewController.m */,
+				5C0AF5FD18DCB019009F951A /* TripDetailWebViewController.h */,
+				5C0AF5FE18DCB019009F951A /* TripDetailWebViewController.m */,
 				5C4E4E3018DB5005008F0042 /* UserProfileViewController.xib */,
 				5C4E4DF918DB35FB008F0042 /* AppDelegate.h */,
 				5C4E4DFA18DB35FB008F0042 /* AppDelegate.m */,
@@ -162,7 +167,6 @@
 		5C4E4E0918DB35FB008F0042 /* PlanMyNYTests */ = {
 			isa = PBXGroup;
 			children = (
-				5C4E4E2818DB4AE4008F0042 /* New Group */,
 				5C4E4E0F18DB35FB008F0042 /* PlanMyNYTests.m */,
 				5C4E4E0A18DB35FB008F0042 /* Supporting Files */,
 			);
@@ -176,13 +180,6 @@
 				5C4E4E0C18DB35FB008F0042 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		5C4E4E2818DB4AE4008F0042 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "New Group";
 			sourceTree = "<group>";
 		};
 		5C4E4E2B18DB4B1A008F0042 /* Images */ = {
@@ -297,6 +294,7 @@
 				5C4E4E2618DB4854008F0042 /* FacebookLoginViewController.m in Sources */,
 				5C0AF5F918DC9586009F951A /* TripDetailViewController.m in Sources */,
 				5C4E4E3118DB5005008F0042 /* UserProfileViewController.m in Sources */,
+				5C0AF5FF18DCB019009F951A /* TripDetailWebViewController.m in Sources */,
 				5C4E4DFB18DB35FB008F0042 /* AppDelegate.m in Sources */,
 				5C4E4DF718DB35FB008F0042 /* main.m in Sources */,
 			);

@@ -7,66 +7,46 @@
 //
 
 #import "TripDetailViewController.h"
+#import "TripDetailWebViewController.h"
 
 @interface TripDetailViewController ()
+
+@property (nonatomic) TripDetailWebViewController *webView;
 
 @end
 
 @implementation TripDetailViewController
 
 - (IBAction)locationLink:(id)sender {
-    NSLog(@"YAY LOCATION!");
     
 }
 
 - (IBAction)eventLink:(id)sender {
-    NSLog(@"YAY EVENT!");
 }
 
 - (IBAction)restaurantLink:(id)sender {
-    NSURL *pageURL = [NSURL URLWithString:self.restaurant[@"website"]];
-    NSLog(@"%@", pageURL);
-    /*
-    NSLog(@"YAY RESTAURANT!");
-    UIViewController *webViewController = [[UIViewController alloc] init];
-    UIWebView *myView = [[UIWebView alloc] init];
-    myView.scalesPageToFit = YES;
-    NSURL *pageURL = [NSURL URLWithString:self.restaurant[@"website"]];
-    [myView loadRequest:[NSURLRequest requestWithURL:pageURL]];
-    [webViewController.view addSubview: myView];
-    [self.navigationController pushViewController:webViewController animated:YES];
-     */
 }
 
 - (IBAction)eventSite:(id)sender {
     NSURL *pageURL = [NSURL URLWithString:self.event[@"link"]];
-    NSLog(@"%@", pageURL);
-    /*
-    UIViewController *webViewController = [[UIViewController alloc] init];
-    UIWebView *myView = [[UIWebView alloc] init];
-    myView.scalesPageToFit = YES;
-    NSURL *pageURL = [NSURL URLWithString:self.event[@"link"]];
-    [myView loadRequest:[NSURLRequest requestWithURL:pageURL]];
-    [webViewController.view addSubview: myView];
-    [self.navigationController pushViewController:webViewController animated:YES];
-     */
+    self.webView.title = self.event[@"name"];
+    self.webView.URL = pageURL;
+    [self.navigationController pushViewController:self.webView animated:YES];
 }
 
 - (IBAction)restaurantSite:(id)sender {
-    UIViewController *webViewController = [[UIViewController alloc] init];
-    UIWebView *myView = [[UIWebView alloc] init];
-    myView.scalesPageToFit = YES;
     NSURL *pageURL = [NSURL URLWithString:self.restaurant[@"website"]];
-    [myView loadRequest:[NSURLRequest requestWithURL:pageURL]];
-    [webViewController.view addSubview: myView];
-    [self.navigationController pushViewController:webViewController animated:YES];
+    self.webView.title = self.restaurant[@"name"];
+    self.webView.URL = pageURL;
+    [self.navigationController pushViewController:self.webView animated:YES];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        TripDetailWebViewController *web = [[TripDetailWebViewController alloc] init];
+        self.webView = web;
     }
     return self;
 }
