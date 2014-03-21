@@ -18,5 +18,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *userName;
 - (IBAction)planEvent:(id)sender;
 - (IBAction)currentTrips:(id)sender;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
 
 @end

@@ -23,18 +23,23 @@
 - (IBAction)planEvent:(id)sender {
     NSURL *url = [NSURL URLWithString:@"http://api.mattpic.com/v1.0/random_trip"];
     NSURLRequest *req = [NSURLRequest requestWithURL:url];
-    
+    self.indicator.hidden = NO;
+    [self.indicator startAnimating];
+    self.indicator.hidesWhenStopped = YES;
     NSURLSessionDataTask *task = [self.session dataTaskWithRequest:req completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        NSLog(@"This is where I am right now.");
         NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-        
         TripDetailViewController *tripDetail = [[TripDetailViewController alloc] initWithNibName:nil bundle:nil];
         tripDetail.location = jsonObject[@"location"];
         tripDetail.event = jsonObject[@"event"];
         tripDetail.restaurant = jsonObject[@"restaurant"];
-        [self.navigationController pushViewController:tripDetail animated:YES];
+        NSLog(@"We're here now!");
         NSLog(@"%@", jsonObject);
-        }];
+        [self.indicator performSelectorOnMainThread:@selector(stopAnimating) withObject:nil waitUntilDone:YES];
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            [self.navigationController pushViewController:tripDetail animated:YES];
+        });
+    }];
+    NSLog(@"Is this where we are?");
     [task resume];
 }
 
@@ -65,12 +70,14 @@
 
 - (void)viewDidLoad
 {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view from its nib.
+    
     if (self.graphUser) {
         self.profilePicture.profileID = self.graphUser.id;
         self.userName.text = self.graphUser.name;
     }
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.indicator.hidden = YES;
 }
 
 - (void)didReceiveMemoryWarning
