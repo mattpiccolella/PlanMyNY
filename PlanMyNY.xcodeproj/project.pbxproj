@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C0AF5F118DC8F5A009F951A /* TripDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C0AF5EF18DC8F5A009F951A /* TripDetailViewController.m */; };
+		5C0AF5F218DC8F5A009F951A /* TripDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C0AF5F018DC8F5A009F951A /* TripDetailViewController.xib */; };
 		5C4E4DEB18DB35FB008F0042 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C4E4DEA18DB35FB008F0042 /* Foundation.framework */; };
 		5C4E4DED18DB35FB008F0042 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C4E4DEC18DB35FB008F0042 /* CoreGraphics.framework */; };
 		5C4E4DEF18DB35FB008F0042 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C4E4DEE18DB35FB008F0042 /* UIKit.framework */; };
@@ -38,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C0AF5EE18DC8F5A009F951A /* TripDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripDetailViewController.h; sourceTree = "<group>"; };
+		5C0AF5EF18DC8F5A009F951A /* TripDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripDetailViewController.m; sourceTree = "<group>"; };
+		5C0AF5F018DC8F5A009F951A /* TripDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TripDetailViewController.xib; sourceTree = "<group>"; };
 		5C4E4DE718DB35FB008F0042 /* PlanMyNY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanMyNY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C4E4DEA18DB35FB008F0042 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5C4E4DEC18DB35FB008F0042 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -129,6 +134,9 @@
 				5C4E4E2518DB4854008F0042 /* FacebookLoginViewController.xib */,
 				5C4E4E2E18DB5005008F0042 /* UserProfileViewController.h */,
 				5C4E4E2F18DB5005008F0042 /* UserProfileViewController.m */,
+				5C0AF5EE18DC8F5A009F951A /* TripDetailViewController.h */,
+				5C0AF5EF18DC8F5A009F951A /* TripDetailViewController.m */,
+				5C0AF5F018DC8F5A009F951A /* TripDetailViewController.xib */,
 				5C4E4E3018DB5005008F0042 /* UserProfileViewController.xib */,
 				5C4E4DF918DB35FB008F0042 /* AppDelegate.h */,
 				5C4E4DFA18DB35FB008F0042 /* AppDelegate.m */,
@@ -227,7 +235,7 @@
 		5C4E4DDF18DB35FB008F0042 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Matthew Piccolella";
 				TargetAttributes = {
 					5C4E4E0118DB35FB008F0042 = {
@@ -262,6 +270,7 @@
 				5C4E4DF518DB35FB008F0042 /* InfoPlist.strings in Resources */,
 				5C4E4E2D18DB4B5E008F0042 /* m6yplan.png in Resources */,
 				5C4E4DFD18DB35FB008F0042 /* Images.xcassets in Resources */,
+				5C0AF5F218DC8F5A009F951A /* TripDetailViewController.xib in Resources */,
 				5C4E4E2718DB4854008F0042 /* FacebookLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C4E4E2618DB4854008F0042 /* FacebookLoginViewController.m in Sources */,
+				5C0AF5F118DC8F5A009F951A /* TripDetailViewController.m in Sources */,
 				5C4E4E3118DB5005008F0042 /* UserProfileViewController.m in Sources */,
 				5C4E4DFB18DB35FB008F0042 /* AppDelegate.m in Sources */,
 				5C4E4DF718DB35FB008F0042 /* main.m in Sources */,
@@ -330,7 +340,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -369,7 +378,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -435,7 +443,6 @@
 		5C4E4E1718DB35FB008F0042 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PlanMyNY.app/PlanMyNY";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -458,7 +465,6 @@
 		5C4E4E1818DB35FB008F0042 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PlanMyNY.app/PlanMyNY";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -493,6 +499,7 @@
 				5C4E4E1518DB35FB008F0042 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5C4E4E1618DB35FB008F0042 /* Build configuration list for PBXNativeTarget "PlanMyNYTests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +508,7 @@
 				5C4E4E1818DB35FB008F0042 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

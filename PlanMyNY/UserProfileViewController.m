@@ -12,12 +12,22 @@
 
 @interface UserProfileViewController ()
 
+@property (nonatomic) NSURLSession *session;
+
 @end
 
 @implementation UserProfileViewController
 
 - (IBAction)planEvent:(id)sender {
-    NSLog(@"To be implemented later...");
+    NSURL *url = [NSURL URLWithString:@"http://api.mattpic.com/v1.0/random_trip"];
+    NSURLRequest *req = [NSURLRequest requestWithURL:url];
+    
+    NSURLSessionDataTask *task = [self.session dataTaskWithRequest:req completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        NSString *resultJSON = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        NSLog(@"%@", resultJSON);
+    }];
+    
+    [task resume];
 }
 
 - (IBAction)currentTrips:(id)sender {
@@ -39,6 +49,8 @@
     if (self) {
         UINavigationItem *navItem = self.navigationItem;
         navItem.title = @"User Profile";
+        NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+        self.session = [NSURLSession sessionWithConfiguration:config delegate:nil delegateQueue:nil];
     }
     return self;
 }
