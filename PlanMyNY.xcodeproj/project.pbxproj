@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5C0AF5F918DC9586009F951A /* TripDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C0AF5F718DC9586009F951A /* TripDetailViewController.m */; };
 		5C0AF5FA18DC9586009F951A /* TripDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C0AF5F818DC9586009F951A /* TripDetailViewController.xib */; };
+		5C0AF5FC18DCA7A9009F951A /* NYT_png_312x1000_q100.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C0AF5FB18DCA7A9009F951A /* NYT_png_312x1000_q100.png */; };
 		5C4E4DEB18DB35FB008F0042 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C4E4DEA18DB35FB008F0042 /* Foundation.framework */; };
 		5C4E4DED18DB35FB008F0042 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C4E4DEC18DB35FB008F0042 /* CoreGraphics.framework */; };
 		5C4E4DEF18DB35FB008F0042 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C4E4DEE18DB35FB008F0042 /* UIKit.framework */; };
@@ -43,6 +44,7 @@
 		5C0AF5F618DC9586009F951A /* TripDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TripDetailViewController.h; path = ../TripDetailViewController.h; sourceTree = "<group>"; };
 		5C0AF5F718DC9586009F951A /* TripDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TripDetailViewController.m; path = ../TripDetailViewController.m; sourceTree = "<group>"; };
 		5C0AF5F818DC9586009F951A /* TripDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TripDetailViewController.xib; path = ../TripDetailViewController.xib; sourceTree = "<group>"; };
+		5C0AF5FB18DCA7A9009F951A /* NYT_png_312x1000_q100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NYT_png_312x1000_q100.png; path = ../../../Downloads/NYT_png_312x1000_q100.png; sourceTree = "<group>"; };
 		5C4E4DE718DB35FB008F0042 /* PlanMyNY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanMyNY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C4E4DEA18DB35FB008F0042 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5C4E4DEC18DB35FB008F0042 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -186,6 +188,7 @@
 		5C4E4E2B18DB4B1A008F0042 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				5C0AF5FB18DCA7A9009F951A /* NYT_png_312x1000_q100.png */,
 				5C4E4E2C18DB4B5E008F0042 /* m6yplan.png */,
 			);
 			name = Images;
@@ -270,6 +273,7 @@
 				5C4E4DF518DB35FB008F0042 /* InfoPlist.strings in Resources */,
 				5C4E4E2D18DB4B5E008F0042 /* m6yplan.png in Resources */,
 				5C4E4DFD18DB35FB008F0042 /* Images.xcassets in Resources */,
+				5C0AF5FC18DCA7A9009F951A /* NYT_png_312x1000_q100.png in Resources */,
 				5C0AF5FA18DC9586009F951A /* TripDetailViewController.xib in Resources */,
 				5C4E4E2718DB4854008F0042 /* FacebookLoginViewController.xib in Resources */,
 			);

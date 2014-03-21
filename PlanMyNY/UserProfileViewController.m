@@ -24,8 +24,6 @@
     NSURL *url = [NSURL URLWithString:@"http://api.mattpic.com/v1.0/random_trip"];
     NSURLRequest *req = [NSURLRequest requestWithURL:url];
     
-    /*
-    
     NSURLSessionDataTask *task = [self.session dataTaskWithRequest:req completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         NSLog(@"This is where I am right now.");
         NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
@@ -37,10 +35,7 @@
         [self.navigationController pushViewController:tripDetail animated:YES];
         NSLog(@"%@", jsonObject);
         }];
-    
     [task resume];
-     */
-    [self.navigationController pushViewController:[[TripDetailViewController alloc]initWithNibName:nil bundle:nil] animated:YES];
 }
 
 - (IBAction)currentTrips:(id)sender {
